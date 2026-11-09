@@ -1,0 +1,42 @@
+
+<ng-container *ngIf="foodItemResponse as response">
+    <main class="restaurant-details">
+        <header class="restaurant-header">
+            <div>
+                <p class="eyebrow">Restaurant menu</p>
+                <h1>{{response.restaurant?.name}}</h1>
+                <p class="restaurant-description">{{response.restaurant?.restaurantDescription}}</p>
+            </div>
+            <button class="checkout-button" (click)="onCheckOut()">
+                <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                Checkout
+            </button>
+        </header>
+
+        <section class="menu-section" aria-labelledby="menu-title">
+            <h2 id="menu-title">Food Menu</h2>
+            <div class="food-list">
+                <article class="food-item" *ngFor="let food of response.foodItemsList">
+                    <div class="food-details">
+                        <h3 class="food-name">{{food.itemName}}</h3>
+                        <p class="food-price">&#x20b9; {{food.price}}</p>
+                    </div>
+                    <div class="food-quantity" aria-label="Quantity controls">
+                        <button
+                            class="quantity-button"
+                            type="button"
+                            aria-label="Decrease quantity"
+                            *ngIf="(food.quantity ?? 0) > 0"
+                            (click)="decrement(food)">−</button>
+                        <span class="quantity-label">{{food.quantity ?? 0}}</span>
+                        <button
+                            class="quantity-button"
+                            type="button"
+                            aria-label="Increase quantity"
+                            (click)="increment(food)">+</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    </ng-container>

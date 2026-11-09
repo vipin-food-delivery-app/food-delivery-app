@@ -1,0 +1,113 @@
+.order-summary {
+  width: min(760px, calc(100% - 32px));
+  margin: 48px auto;
+  padding: 32px;
+  border: 1px solid #eee6de;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgb(52 37 24 / 8%);
+}
+
+.order-summary h1 {
+  margin: 0 0 24px;
+  color: #292521;
+  font-size: 2rem;
+}
+
+.order-summary table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.order-summary th,
+.order-summary td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #eee9e4;
+}
+
+.order-summary th {
+  background: #fff6ef;
+  color: #65584e;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.order-summary tfoot td {
+  border-bottom: 0;
+  color: #292521;
+  font-weight: 700;
+}
+
+.order-summary tfoot td:last-child {
+  color: #c45027;
+}
+
+.checkout-button,
+.close-button {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #d85f32;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.checkout-button {
+  display: block;
+  margin: 24px 0 0 auto;
+}
+
+.checkout-button:hover,
+.close-button:hover {
+  background: #b94f2a;
+}
+
+.dialog-container {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(25 20 16 / 55%);
+}
+
+.dialog-box {
+  width: min(420px, 100%);
+  padding: 32px;
+  border-radius: 16px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 16px 48px rgb(0 0 0 / 20%);
+}
+
+.dialog-box h2 {
+  margin: 0 0 12px;
+  color: #292521;
+}
+
+.dialog-box p {
+  margin: 0 0 24px;
+  color: #6c625a;
+  line-height: 1.5;
+}
+
+@media (max-width: 520px) {
+  .order-summary {
+    margin: 24px auto;
+    padding: 20px 16px;
+  }
+
+  .order-summary h1 {
+    font-size: 1.6rem;
+  }
+
+  .order-summary th,
+  .order-summary td {
+    padding: 11px 8px;
+    font-size: 0.9rem;
+  }
+}

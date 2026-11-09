@@ -1,0 +1,145 @@
+.restaurant-details {
+  width: min(960px, calc(100% - 32px));
+  margin: 40px auto;
+  color: #272522;
+}
+
+.restaurant-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #fff3e9, #ffe1ce);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #b94f2a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.restaurant-header h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.restaurant-description {
+  margin: 10px 0 0;
+  color: #6c625a;
+  line-height: 1.6;
+}
+
+.checkout-button {
+  flex: 0 0 auto;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #d85f32;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.checkout-button:hover {
+  background: #b94f2a;
+}
+
+.menu-section {
+  margin-top: 36px;
+}
+
+.menu-section h2 {
+  margin: 0 0 16px;
+  font-size: 1.6rem;
+}
+
+.food-list {
+  overflow: hidden;
+  border: 1px solid #ece8e3;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.food-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px;
+}
+
+.food-item + .food-item {
+  border-top: 1px solid #ece8e3;
+}
+
+.food-name {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.food-price {
+  margin: 6px 0 0;
+  color: #6c625a;
+}
+
+.food-quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantity-button {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid #d85f32;
+  border-radius: 8px;
+  background: #fff;
+  color: #b94f2a;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.quantity-button:hover {
+  background: #fff3e9;
+}
+
+.quantity-label {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.loading-message,
+.error-message {
+  width: min(960px, calc(100% - 32px));
+  margin: 48px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f7f4ef;
+  color: #5f5851;
+  text-align: center;
+}
+
+.error-message {
+  background: #fff0ed;
+  color: #a52f21;
+}
+
+@media (max-width: 600px) {
+  .restaurant-header {
+    flex-direction: column;
+    padding: 22px;
+  }
+
+  .food-item {
+    padding: 16px;
+  }
+}
