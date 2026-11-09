@@ -24,7 +24,7 @@ pipeline{
         }
 
         stage('Docker Build and Push') {
-    steps {
+            steps {
         withCredentials([usernamePassword(
             credentialsId: 'DOCKER_HUB_CREDENTIAL', // Matches your Jenkins Credential ID exactly
             passwordVariable: 'DOCKERHUB_CREDENTIALS_PSW', // Jenkins injects your password here
